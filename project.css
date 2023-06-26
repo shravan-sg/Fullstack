@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(wp2041461.jpg) no-repeat;
+    background-size: auto;
+    background-position: center;
+    position: fixed;
+    top: -250px;
+    left: 40px;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+.music{
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+.navi a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.navi a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navi a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}    
+    
+        
+
+
+.navi .btnlog{
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+.navi .btnlog:hover{
+    background-color: white;
+    color: black;
+} 
+.wraper{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    background: transparent;
+    border: 2px solide rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    /* backdrop-filter: blur(8px); */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 35%;
+    top: 95px;
+    overflow: hidden;
+    
+    
+}
+.wraper.formbox{
+    widows: 100%;
+    padding: 40px;
+}
+.wraper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background: rgb(25, 36, 56);
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.formbox h2{
+    font-size: 2em;
+     color: black;
+     text-align: center;
+}
+.inputbox{
+ position: relative;
+ width: 100%;
+ height: 50px;
+ border-bottom: 2px solid black;
+ margin: 30px 0;    
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(179, 174, 174);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+ .inputbox input:focus~label,
+ .inputbox input:valid~label{
+    top: -5px;
+}
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:  rgb(179, 174, 174);
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+.inputbox .icon{
+    position: absolute;
+    right: 8px;
+    /* top: 2px; */
+    font-size: 1.2em;
+    color:  rgb(179, 174, 174);
+    line-height: 55px;
+}
+.rememberbox{
+    font-size: .8em;
+    color:  rgb(179, 174, 174);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.rememberbox input label{
+    margin-right: 2px;
+    accent-color:  rgb(179, 174, 174);
+
+}
+.rememberbox a{
+    color:  rgb(179, 174, 174);
+    text-decoration: none;
+}
+.rememberbox a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    transition: .6s;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+.loginreg {
+    font-size: .9em;
+    color:  rgb(179, 174, 174);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.loginreg p a{
+    color:  rgb(179, 174, 174);
+    text-decoration: none;
+    font-weight: 500;
+}
+.loginreg p a:hover{
+    text-decoration: underline;
+}
+.wraper.formboxsignup{
+    widows: 100%;
+    padding: 40px;
+}
+.wraper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background: rgb(25, 36, 56);
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.formboxsignup h2{
+    font-size: 2em;
+     color: black;
+     text-align: center;
+}
+.inputbox{
+ position: relative;
+ width: 100%;
+ height: 50px;
+ border-bottom: 2px solid black;
+ margin: 30px 0;    
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(179, 174, 174);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+ .inputbox input:focus~label,
+ .inputbox input:valid~label{
+    top: -5px;
+}
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:  rgb(179, 174, 174);
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+.inputbox .icon{
+    position: absolute;
+    right: 8px;
+    /* top: 2px; */
+    font-size: 1.2em;
+    color:  rgb(179, 174, 174);
+    line-height: 55px;
+}
+.rememberbox{
+    font-size: .8em;
+    color:  rgb(179, 174, 174);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.rememberbox input label{
+    margin-right: 2px;
+    accent-color:  rgb(179, 174, 174);
+
+}
+.rememberbox a{
+    color:  rgb(179, 174, 174);
+    text-decoration: none;
+}
+.rememberbox a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    transition: .6s;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+.loginreg {
+    font-size: .9em;
+    color:  rgb(179, 174, 174);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.loginreg p a{
+    color:  rgb(179, 174, 174);
+    text-decoration: none;
+    font-weight: 500;
+}
+.loginreg p a:hover{
+    text-decoration: underline;
+}
